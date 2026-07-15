@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TaskFlow Dashboard</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Full-stack task manager</p>
+          <h1>TaskFlow</h1>
+          <p class="hero-copy">A responsive workspace for planning work, tracking progress, and managing your daily tasks.</p>
+        </div>
+        <div id="auth-card" class="card"></div>
+      </section>
+
+      <section id="dashboard" class="dashboard hidden">
+        <div class="card header-card">
+          <div>
+            <p class="eyebrow">Signed in as</p>
+            <h2 id="user-name">User</h2>
+          </div>
+          <button id="logout-btn" class="secondary-btn">Logout</button>
+        </div>
+
+        <div class="card form-card">
+          <h3 id="form-title">Create a task</h3>
+          <form id="task-form">
+            <input id="task-title" name="title" type="text" placeholder="Task title" required />
+            <textarea id="task-description" name="description" placeholder="Description" required></textarea>
+            <label class="checkbox-row">
+              <input id="task-completed" type="checkbox" />
+              <span>Mark as completed</span>
+            </label>
+            <div class="button-row">
+              <button class="primary-btn" type="submit">Save task</button>
+              <button id="cancel-edit" class="secondary-btn" type="button">Cancel</button>
+            </div>
+          </form>
+        </div>
+
+        <div class="card list-card">
+          <div class="section-title-row">
+            <h3>Your tasks</h3>
+            <span id="task-count" class="pill">0 items</span>
+          </div>
+          <div id="task-list" class="task-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

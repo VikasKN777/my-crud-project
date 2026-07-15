@@ -1,0 +1,14 @@
+{
+  "name": "full-stack-task-app",
+  "version": "1.0.0",
+  "description": "A responsive full-stack task manager with basic authentication and CRUD operations",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.2"
+  }
+}
